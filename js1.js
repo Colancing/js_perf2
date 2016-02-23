@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
             xml = new ActiveXObject("Microsoft.XMLHTTP");
         }
 
-        xml.addEventListener('readystatechange', function (event) {
+        xml.addEventListener('readystatechange', function () {
             if (xml.readyState == 4) {
                 if (xml.status === 200 || xml.status === 0) {
                     var answer = document.getElementById('answer');
@@ -75,9 +75,7 @@ window.addEventListener("load", function () {
         xml.open("POST", 'D1.php', true);
         xml.setRequestHeader("content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
         xml.send("note=" + note);
-//        var selection = notes[newselect.value].fr;
-//        var translation = notes[newselect.value].am;
-//
+
         document.getElementById("default").selected = true;
     }
 

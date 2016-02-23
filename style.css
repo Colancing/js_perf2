@@ -9,6 +9,7 @@ h1, #go {
     color: white;
     text-transform: uppercase;
 }
+
 .list, #answer, button {
     width: 60%;
     margin:20px auto;
