@@ -1,0 +1,28 @@
+
+body {
+    background: #1c5570;
+    color: #ffffff;
+    font:400 .9em/1.9 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+}
+h1, #go {
+    font-size : 120%;
+    color: white;
+    text-transform: uppercase;
+}
+.list, #answer, button {
+    width: 60%;
+    margin:20px auto;
+    padding: 1em;
+    height: 4em;
+    border: 0 none;
+}
+
+.list{
+    display:block;
+    background: #21cf8f;
+    cursor: pointer;
+    color:white;
+}
+#answer{
+    color: #f2bb18;
+}
