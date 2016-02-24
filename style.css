@@ -4,7 +4,8 @@ body {
     color: #ffffff;
     font:400 .9em/1.9 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
 }
-h1, #go {
+
+h1, #go, #close {
     font-size : 120%;
     color: white;
     text-transform: uppercase;
@@ -26,4 +27,12 @@ h1, #go {
 }
 #answer{
     color: #f2bb18;
+}
+
+#close {
+    display: none;
+}
+
+#go {
+    display: block;
 }
