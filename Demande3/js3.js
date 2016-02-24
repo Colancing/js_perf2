@@ -7,9 +7,9 @@ window.addEventListener("load", function () {
     var go = document.getElementById("go");
     var close = document.getElementById("close");
     var result = document.getElementById("result");
-    var select = document.getElementById("select");
+    var select;
+
 //Création des nouveaux éléments
-    console.log(select);
     function showform() {
         if (document.getElementById('form') == null) {
             var note = "Choix";
@@ -29,6 +29,9 @@ window.addEventListener("load", function () {
     }
 
     function gotophp(note) {
+        if (select) {
+            select.removeEventListener("change", modify, false);
+        }
         var xml;
 
         if (window.XMLHttpRequest) {
@@ -41,6 +44,8 @@ window.addEventListener("load", function () {
             if (xml.readyState == 4) {
                 if (xml.status === 200 || xml.status === 0) {
                     result.innerHTML = xml.responseText;
+                    select = document.getElementById('select');
+                    select.addEventListener("change", modify, false);
                 } else {
                     alert('error code :' + xml.status + ':' + xml.statusText)
                 }
@@ -51,11 +56,9 @@ window.addEventListener("load", function () {
         xml.send("note=" + note);
     }
 
-
-    if (select) {
+    function modify() {
         var note = select.value;
-        console.log("ecoute ok : " + note);
-        select.addEventListener("change", gotophp(note), false);
+        gotophp(note);
     }
 
     go.addEventListener('click', showform, false);

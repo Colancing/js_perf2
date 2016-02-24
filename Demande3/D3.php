@@ -3,13 +3,13 @@
 <?php
 $array_notes = array(
 	'Choix' => '',
-	'do'    => 'C',
-	'ré'    => 'D',
-	'mi'    => 'E',
-	'fa'    => 'F',
-	'sol'   => 'G',
-	'la'    => 'A',
-	'si'    => 'B'
+	'DO'    => 'C',
+	'RE'    => 'D',
+	'MI'    => 'E',
+	'FA'    => 'F',
+	'SOL'   => 'G',
+	'LA'    => 'A',
+	'SI'    => 'B'
 );
 $result      = '';
 
