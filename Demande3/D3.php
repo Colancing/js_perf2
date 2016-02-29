@@ -12,7 +12,6 @@ $array_notes = array(
 	'SI'    => 'B'
 );
 $result      = '';
-
 if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 	if ( isset ( $_POST['note'] ) && $_POST['note'] != 'Choix' ) {
 		$note   = $_POST['note'];
@@ -40,7 +39,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		<legend>Correspondance des notes de musique</legend>
 		<p>Je souhaite trouver la note américaine correspondante à la note suivante :</p>
 		<br>
-		<select name="note_french" id="select">
+		<select name="note_french" id="select" class="list">
 			<?php
 			foreach ( $array_notes as $note_fr => $note_us ) {
 				echo '<option value="' . $note_fr . '">' . $note_fr . '</option>';

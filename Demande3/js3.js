@@ -1,6 +1,7 @@
 /**
  * Created by Emmanuelle on 10/01/2016.
  */
+(function () {
 window.addEventListener("load", function () {
 
 
@@ -66,5 +67,5 @@ window.addEventListener("load", function () {
     go.addEventListener('click', showform, false);
     close.addEventListener('click', reset, false);
 
-})
-; //s'assure que la page est chargée
+}); //s'assure que la page est chargée
+})();//fin de la fonction anonyme
