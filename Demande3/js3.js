@@ -26,6 +26,8 @@ window.addEventListener("load", function () {
         result.style.display = "none";
         go.style.display = "block";
         close.style.display = "none";
+        var answer = document.getElementById('answer');
+        answer.innerHTML = "Vous pouvez choisir une note dans le menu déroulant";
     }
 
     function gotophp(note) {

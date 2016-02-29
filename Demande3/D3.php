@@ -19,7 +19,7 @@ if ( $_SERVER["REQUEST_METHOD"] == "POST" ) {
 		$answer = '<p> Le ' . $note . ' correspond à la notation américaine :  ' . $array_notes[ $note ] . '</p>';
 
 	} else {
-		$answer = 'Veuillez choisir une note dans le menu déroulant';
+		$answer = 'Vous pouvez choisir une note dans le menu déroulant';
 	}
 }
 ?>
